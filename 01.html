@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{
+      background-color: #CCC;
+    }
+    p::before{
+      content: 'I am before';
+      color: red;
+    }
+    /* p::after{
+      content: "I am after";
+      color: greenyellow;
+    } */
+    /* 偽元素是inline */
+    p::after{
+      content: ;
+      display:block;
+      width: 4px;
+      height: 2px;
+      background-color: #f00;
+      transition: 1s;
+    }
+    nav{
+      display: flex;
+    }
+    a{
+      display: flex;
+      font-size: 10px;
+      flex-direction: column;
+      text-decoration: none;
+      align-items: center;
+      color: black;
+      padding: 10px 20px;
+    }
+    a::after{
+      content: ;
+      display: block;
+      width: 4px;
+      height: 2px;
+      background-color: #f00;
+    }
+    a:hover::after{
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+
+    <nav class="navbar">
+      <a href="https://astro.5xruby.tw/">
+        <span>ASTRO Camp</span>
+      </a>
+      <a href="https://astro.5xruby.tw/">
+        <span>ASTRO Camp</span>
+      </a>
+      <a href="https://astro.5xruby.tw/">
+        <span>ASTRO Camp</span>
+      </a>
+      <a href="https://astro.5xruby.tw/">
+        <span>ASTRO Camp</span>
+      </a>
+      <a href="https://astro.5xruby.tw/">
+        <span>ASTRO Camp</span>
+      </a>
+    </nav>
+
+  <p>內容</p>
+</body>
+</html>
