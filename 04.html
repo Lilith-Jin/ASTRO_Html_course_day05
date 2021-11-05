@@ -7,27 +7,48 @@
   <title>Document</title>
   <style>
     /* absolute會定在絕對位置，只要捲動就跟著頁面一起捲走 */
+    /* 所有定位中 只有relative不會抽離該層 */
     .box{
       width: 100px;
       height: 100px;
       background-color: brown;
       font-size: 50px;
       position: absolute;
-      /* right: 0;
-      bottom: 0; */
+      right: 0;
+      bottom: 0;
     }
-    .p{
-      color: crimson;
+    .pp{
+      color: blueviolet;
+    }
+    .A,.B,.C{
+      padding: 30px;
+      border: 10px solid red;
+    }
+    .A{
+      position: relative;
+    }
+    .B{
+      position: relative;
+    }
+    .C{
+      /* position: relative; */
     }
   </style>
 </head>
 <body>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, molestias vitae. Totam sint accusantium dolore velit obcaecati corrupti aspernatur? Sequi, possimus? Deserunt optio eveniet consequatur fugiat quia commodi veritatis nostrum!</p>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, molestias vitae. Totam sint accusantium dolore velit obcaecati corrupti aspernatur? Sequi, possimus? Deserunt optio eveniet consequatur fugiat quia commodi veritatis nostrum!</p>
-  <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, molestias vitae. Totam sint accusantium dolore velit obcaecati corrupti aspernatur? Sequi, possimus? Deserunt optio eveniet consequatur fugiat quia commodi veritatis nostrum!</p>
-  <div class="box">
-    box
+  <p class="pp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, molestias vitae. Totam sint accusantium dolore velit obcaecati corrupti aspernatur? Sequi, possimus? Deserunt optio eveniet consequatur fugiat quia commodi veritatis nostrum!</p>
+  <div class="A">
+    <div class="B">
+      <div class="C">
+        <div class="box">
+          box
+        </div>
+      </div>
+    </div>
   </div>
+  
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, molestias vitae. Totam sint accusantium dolore velit obcaecati corrupti aspernatur? Sequi, possimus? Deserunt optio eveniet consequatur fugiat quia commodi veritatis nostrum!</p>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, molestias vitae. Totam sint accusantium dolore velit obcaecati corrupti aspernatur? Sequi, possimus? Deserunt optio eveniet consequatur fugiat quia commodi veritatis nostrum!</p>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, molestias vitae. Totam sint accusantium dolore velit obcaecati corrupti aspernatur? Sequi, possimus? Deserunt optio eveniet consequatur fugiat quia commodi veritatis nostrum!</p>
