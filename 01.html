@@ -11,7 +11,7 @@
     }
     p::before{
       content: 'I am before';
-      color: red;
+      color: blue;
     }
     /* p::after{
       content: "I am after";
@@ -19,9 +19,9 @@
     } */
     /* 偽元素是inline */
     p::after{
-      content: ;
+      content:'' ;
       display:block;
-      width: 4px;
+      width: 20px;
       height: 2px;
       background-color: #f00;
       transition: 1s;
@@ -32,6 +32,7 @@
     a{
       display: flex;
       font-size: 10px;
+      /* column才能讓連結 文字 底線排成一欄 */
       flex-direction: column;
       text-decoration: none;
       align-items: center;
@@ -41,12 +42,14 @@
     a::after{
       content: '';
       display: block;
+      /* w先設0 要hover到才會出現 */
       width: 0px;
       height: 2px;
       background-color: #f00;
       transition: all 0.3s;
     }
     a:hover::after{
+      /* hover後要填滿整個空間，所以w設100% */
       width: 100%;
     }
   </style>
